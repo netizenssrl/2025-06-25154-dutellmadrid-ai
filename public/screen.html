@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>A Story That Matters | Screen</title>
+
+		<link rel="stylesheet" href="assets/fonts/fonts.css" />
+
+		<link rel="stylesheet" href="assets/css/bootstrap-5.3.0-dist/bootstrap-grid.min.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap-5.3.0-dist/bootstrap-utilities.min.css" />
+		<link rel="stylesheet" href="assets/css/screen.css" />
+
+		<script src="assets/js/jquery-3.7.0.min.js"></script>
+		<script src="assets/js/socket.io.min.js"></script>
+		<script src="assets/js/axios/axios.min.js"></script>
+		<script src="assets/js/turn.min.js"></script>
+		<script src="assets/js/screen.js"></script>
+	</head>
+	<body>
+		<section id="video-section" class="screen-section">
+			<video id="video-loop" muted loop autoplay>
+				<source src="https://saintramednortheurope.blob.core.windows.net/dutell2025/Video_EOE_v3.mp4" type="video/mp4">
+			</video>
+		</section>
+		<section id="book-section" class="screen-section">
+			<div class="d-flex h-100 align-items-center justify-content-center flex-column">
+                <div>
+                    <div class="postcard-carousel-container">
+                        <div id="postcard-carousel"></div>
+                    </div>
+                    <p id="empty-book-parag" class="text-white text-center">Empty book</p>
+                </div>
+                <div class="row justify-content-between w-100 footer-row">
+                    <div class="col-auto">
+                        <p class="text-white">Pictures will be generated using AI models and are for illustration purposes only. Actual results may vary.</p>
+                    </div>
+			</div>
+		</section>
+	</body>
+</html>

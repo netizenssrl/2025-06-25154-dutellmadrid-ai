@@ -1,0 +1,105 @@
+@keyframes rotate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+*{
+    margin: 0;
+    line-height: 1.2;
+    font-size: 14px;
+    font-family: 'Gotham';
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+#submissions-table td, #submissions-table th{
+   vertical-align: middle;
+}
+#submissions-table td span{
+    display: block;
+}
+td.fitwidth{
+    width: 1px;
+    white-space: nowrap;
+}
+.modal-title span{
+    font-size: inherit;
+}
+.successfull-upload{
+    opacity: 0;
+}
+.successfull-upload.visible{
+    opacity: 1;
+}
+#btn-upload{
+    position: relative;
+    padding-left: 28px;
+    padding-right: 28px;
+}
+
+#btn-upload.uploading:after{
+    content: "";
+    position: absolute;
+    background-image: url("../img/spinner.png");
+    background-position: center;
+    background-size: contain;
+    width: 15px;
+    height: 15px;
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 8px;
+    margin: auto;
+    animation: rotate 1s linear infinite;
+}
+
+.form-check.form-switch{
+    padding-left: 0;
+    text-align: center;
+}
+.form-switch .form-check-input{
+    margin-left: 0;
+    float: none;
+    cursor: pointer;
+}
+.form-switch .form-check-input:focus{
+    outline: none;
+    box-shadow: none;
+}
+.form-switch.form-switch-md .form-check-input {
+    height: 1.5rem;
+    width: calc(2rem + 0.75rem);
+    border-radius: 3rem;
+}
+.ck.ck-editor__editable_inline{
+    padding: 15px !important;
+}
+.btn-sendmail{
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.btn-sendmail.sending:after{
+    content: "";
+    position: absolute;
+    background-image: url("../img/spinner.png");
+    background-position: center;
+    background-size: contain;
+    width: 18px;
+    height: 18px;
+    display: block;
+    top: 0;
+    bottom: 0;
+    right: 8px;
+    margin: auto;
+    animation: rotate 1s linear infinite;
+}
+@media (min-width: 1200px){
+    .modal-xl {
+        --bs-modal-width: 1340px;
+    }
+}

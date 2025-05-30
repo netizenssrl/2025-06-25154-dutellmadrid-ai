@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <meta name="theme-color" content="#1C2D47">
+		<meta meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>A Story That Matters</title>
+
+		<link rel="stylesheet" href="assets/fonts/fonts.css" />
+		<link rel="stylesheet" href="https://use.typekit.net/qzc1ozl.css">
+
+		<link rel="stylesheet" href="assets/css/bootstrap-5.3.0-dist/bootstrap-grid.min.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap-5.3.0-dist/bootstrap-utilities.min.css" />
+		<link rel="stylesheet" href="assets/css/client.css" />
+
+		<script src="assets/js/jquery-3.7.0.min.js"></script>
+		<script src="assets/js/jquery.validate.min.js"></script>
+		<script src="assets/js/axios/axios.min.js"></script>
+		<script src="assets/js/socket.io.min.js"></script>
+		<script src="assets/js/turn.min.js"></script>
+		<script src="assets/js/client.js"></script>
+        
+	</head>
+	<body activeSectionId="intro-section">
+		<header>
+            <div class="row justify-content-center g-0">
+                <div class="col-auto">
+                    <img src="assets/img/dutell-logo.png" class="dutell-logo" />
+                </div>
+            </div>
+			<div class="row justify-content-center g-0">
+				<div class="col-auto">
+					<a href="/">
+						<img src="assets/img/client-logo.png" class="main-logo" />
+					</a>
+				</div>
+			</div>
+		</header>
+		<section class="app-section" id="intro-section">
+			<main class="py-4 py-md-5">
+				<div class="container">
+					<div class="row justify-content-center mb-5">
+						<div class="col-auto text-center">
+							<button class="primary-btn navigation-btn" idsection="preform-section">
+								Share your aspirations<br>Create a Patient Moment
+							</button>
+						</div>
+					</div>
+				</div>
+			</main>
+			<footer class="py-3 py-md-5">
+				<div class="container">
+                    <div class="row align-items-end">
+                        <div class="col-6">
+                            <p class="text-white fw-medium">MAT-GLB-2502095-v1.0-05/2025</p>
+                        </div>
+                         <div class="col-6">
+                            <p class="text-white fw-medium text-end">
+                                Content of postcards will be generated using AI models and are for illustration purposes only.<br>
+						        Actual results may vary.
+                            </p>
+                        </div>
+                    </div>
+				</div>
+			</footer>
+		</section>
+		<section class="app-section" id="preform-section">
+			<main class="py-4 py-md-5">
+				<div class="container">
+					<p class="text-center mt-3 mb-5">
+						Every EoE patient has the ability to thrive, <br>
+                        and what that looks like is as unique <br>
+                        as patients themselves.<br><br>
+                        Share an aspiration you have <br>
+                        for one of your EoE patients, <br>
+                        and we’ll bring it to life <br>
+                        as unique postcard.<br><br>
+                        Your hopes for patients have the power to inspire!
+					</p>
+					<p class="text-center mb-5 fw-medium">
+						Read and agree to the terms and conditions (T&C)<br>
+						at the following links:<br>
+						<a href="https://www.sanofi.com/en/privacy-and-data-protection" target="_blank"><i>Sanofi’s Privacy & Data Protection Policy</i></a> - <a href="https://custom.cvent.com/93AD43E57F654E2DA1656BF2075689C6/files/ecaa4cfa7f184108ab4c111b277ed45a.pdf" target="_blank"><i>GDPR</i></a><br>
+						and click ‘Next’ to move forward
+					</p>
+					<form id="agreement-form" method="post">
+						<div class="row justify-content-center mb-5 g-4">
+							<div class="col-auto text-center">
+								<input type="radio" name="agreement" id="agreement-yes" class="radio-input" value="yes" />
+								<label for="agreement-yes" class="radio-label fw-bold">Yes</label>
+							</div>
+							<div class="col-auto text-center">
+								<input type="radio" name="agreement" id="agreement-no" class="radio-input" value="no" />
+								<label for="agreement-no" class="radio-label fw-bold">No</label>
+							</div>
+							<div class="col-12">
+								<div class="error-field text-center" id="error-agreement"></div>
+							</div>
+						</div>
+						<div class="row justify-content-center mb-5">
+							<div class="col-auto">
+								<input type="submit" class="submit-btn" value="Next" />
+							</div>
+						</div>
+					</form>
+				</div>
+			</main>
+			<footer class="py-3 py-md-5">
+				<div class="container">
+					<div class="row align-items-end">
+                         <div class="col">
+                            <p class="text-white fw-medium text-end">
+                                Content of postcards will be generated using<br>
+                                AI models and are for illustration purposes only.<br>
+						        Actual results may vary.
+                            </p>
+                        </div>
+                    </div>
+				</div>
+			</footer>
+		</section>
+		<section class="app-section" id="form-section">
+			<main class="py-4 py-md-5">
+				<div class="container">
+					<p class="text-center fw-bold">
+						Using digital tools we’ll turn your aspirations for patients 
+                        into a personal postcard that can be displayed 
+                        at the ‘Moments That Matter’ booth.
+					</p>
+					<p class="text-center">
+						Share as many details as possible in order<br>
+                        to create the most meaningful moment.
+					</p>
+                    <p class="text-center">
+						Please do not use any of your patient’s personal data<br>
+                        (e.g., name, date of birth, etc.).
+					</p>
+					<p class="text-center mb-5 fw-bold">
+						Please describe your patient moment:
+					</p>
+					<p class="fw-bold text-center mb-3">
+						Patient’s assigned gender at birth*
+					</p>
+					<form id="main-form" method="post">
+						<div class="row mb-3">
+							<div class="col text-center">
+								<input type="radio" name="gender" id="gender-male" class="radio-input" value="male" />
+								<label for="gender-male" class="radio-label fw-bold">Male</label>
+							</div>
+							<div class="col text-center">
+								<input type="radio" name="gender" id="gender-female" class="radio-input" value="female" />
+								<label for="gender-female" class="radio-label fw-bold">Female</label>
+							</div>
+						</div>
+						<div class="row justify-content-center mb-5">
+							<div class="col-9">
+								<input type="text" name="genderother" id="gender-other" class="text-input" placeholder="Or specify" />
+								<input type="hidden" name="genderhidden" id="genderhidden" value="" />
+								<div class="error-field text-center" id="error-genderhidden"></div>
+							</div>
+						</div>
+						<p class="fw-bold text-center mb-3">
+							Patient's age<sup>*</sup>
+						</p>
+						<div class="row justify-content-center mb-5">
+							<div class="col-6">
+								<input type="text" name="age" id="age" class="text-input" />
+							</div>
+							<div class="col-12">
+								<div class="error-field text-center" id="error-age"></div>
+							</div>
+						</div>
+						<p class="fw-bold text-center mb-3">
+							Patient's ethnicity<sup>*</sup>
+						</p>
+						<div class="row justify-content-center mb-5">
+							<div class="col-9">
+								<input type="text" name="ethnicity" id="ethnicity" class="text-input" />
+							</div>
+							<div class="col-12">
+								<div class="error-field text-center" id="error-ethnicity"></div>
+							</div>
+						</div>
+						<p class="fw-bold text-center">
+							What do you want <br>
+                            your EoE patients to experience?
+						</p>
+						<p class="fw-bold text-center">
+							Here’s an example for you:
+						</p>
+						<p class="text-center mb-3">
+							<i>
+								“I’d like my patient to enjoy a pizza from their favorite restaurant with friends”<br>
+								“I’d like my 6 year-old patient to eat enough to grow strong”
+							</i>
+						</p>
+						<div class="mb-3">
+							<textarea name="story" id="story" class="area-input" rows="5"></textarea>
+							<div class="error-field text-center" id="error-story"></div>
+						</div>
+						<p class="text-center mb-3">
+							<i>Please write your title, name and surname (Optional)</i>
+						</p>
+						<div class="row justify-content-center mb-3">
+							<div class="col">
+								<input type="text" name="fullname" id="fullname" class="text-input" placeholder="Title, Name and Surname"/>
+								<p class="fs-8 text-center my-2">
+									* Compulsory field
+								</p>
+							</div>
+						</div>
+						<div class="row justify-content-center mb-5">
+							<div class="col-auto">
+								<input type="submit" class="submit-btn" id="prev-btn" value="Prev" />
+							</div>
+							<div class="col-auto">
+								<input type="submit" class="submit-btn" value="Done" />
+							</div>
+						</div>
+					</form>
+				</div>
+			</main>
+			<footer class="py-3 py-md-5">
+				<div class="container">
+					<div class="row align-items-end">
+                         <div class="col">
+                            <p class="text-white fw-medium text-end">
+                                Content of postcards will be generated using<br>
+                                AI models and are for illustration purposes only.<br>
+						        Actual results may vary.
+                            </p>
+                        </div>
+                    </div>
+				</div>
+			</footer>
+		</section>
+		<section class="app-section" id="agreement-section">
+			<main class="py-4 py-md-5">
+				<div class="container">
+					<p class="text-center mb-7 fs-25 fs-lg-35 fw-medium">
+						You must read<br>
+						and agree to the T&C.
+					</p>
+					<div class="row justify-content-center">
+						<div class="col-auto">
+							<button class="submit-btn navigation-btn" idsection="preform-section">Done</button>
+						</div>
+					</div>
+				</div>
+			</main>
+			<footer class="py-3 py-md-5">
+				<div class="container">
+					<div class="row align-items-end">
+                         <div class="col">
+                            <p class="text-white fw-medium text-end">
+                                Content of postcards will be generated using<br>
+                                AI models and are for illustration purposes only.<br>
+						        Actual results may vary.
+                            </p>
+                        </div>
+                    </div>
+				</div>
+			</footer>
+		</section>
+		<section class="app-section" id="thankyou-section">
+			<main class="py-4 py-md-5">
+				<div class="container">
+					<p class="text-center mb-5">
+						Thank you, your EoE patient moment<br>
+						is being created.
+					</p>
+					<p class="text-center mb-5 fs-20 fs-lg-35">
+						You will find<br>
+                        your postcard at the<br>
+                        ‘Moments That Matter’ corner.
+					</p>
+					<div class="row justify-content-center">
+						<div class="col-auto">
+							<button class="submit-btn reload-btn">Done</button>
+						</div>
+					</div>
+				</div>
+			</main>
+			<footer class="py-3 py-md-5">
+				<div class="container">
+					<div class="row align-items-end">
+                         <div class="col">
+                            <p class="text-white fw-medium text-end">
+                                Content of postcards will be generated using<br>
+                                AI models and are for illustration purposes only.<br>
+						        Actual results may vary.
+                            </p>
+                        </div>
+                    </div>
+				</div>
+			</footer>
+		</section>
+		<section class="app-section" id="book-section">
+			<main class="">
+				<div class="row justify-content-center align-items-center g-0 g-md-3 mb-3 mb-md-5">
+					<div class="col-auto">
+						<img src="assets/img/icon-arrow-left.png" class="postcard-carousel-arrow left" />
+					</div>
+					<div class="col-auto">
+                        <div class="postcard-carousel-container">
+						    <div id="postcard-carousel"></div>
+                        </div>
+					</div>
+					<div class="col-auto">
+						<img src="assets/img/icon-arrow-right.png" class="postcard-carousel-arrow right" />
+					</div>
+				</div>
+				<div class="row justify-content-center g-0">
+					<div class="col-auto pe-3">
+						<button class="btn-home navigation-btn" idsection="intro-section">
+							<div class="row justify-content-center align-items-center">
+								<div class="col-auto">
+									<i class="home-icon"></i>
+								</div>
+								<div class="col-auto">
+									<p class="text-white">Home</p>
+								</div>
+							</div>
+						</button>
+					</div>
+					<div class="col-auto ps-3">
+						<button class="btn-like">
+							<div class="row justify-content-between">
+								<div class="col-auto">
+									<p class="toggle-text">
+										<i class="like-icon"></i>
+										Like
+									</p>
+								</div>
+								<div class="col-auto">
+									<p class="like-count">0</p>
+								</div>
+							</div>
+						</button>
+					</div>
+				</div>
+			</main>
+			<footer class="py-3 py-md-5">
+				<div class="container">
+					<p class="text-black text-center fw-medium">
+						Pictures will be generated using AI models and are for illustration purposes only.<br>
+						Actual results may vary.<br><br>
+					</p>
+				</div>
+			</footer>
+		</section>
+	</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>A Story That Matters | Admin</title>
+
+		<link rel="stylesheet" href="assets/fonts/fonts.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap-5.3.0-dist/bootstrap.min.css" />
+		<link rel="stylesheet" href="assets/css/admin.css" />
+
+		<script src="assets/js/jquery-3.7.0.min.js"></script>
+		<script src="assets/js/jquery.validate.min.js"></script>
+        <script src="assets/js/ckeditor/ckeditor.js"></script>
+        <script src="assets/js/axios/axios.min.js"></script>
+        <script src="assets/js/bootstrap-5.3.0-dist/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/socket.io.min.js"></script>
+		<script src="assets/js/admin.js"></script>
+	</head>
+    <body>
+        <main class="py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="text-center mb-5">Submissions</h1>
+                    </div>
+                </div>
+                <div class="row justify-content-end mb-4">
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-warning px-3 me-2 text-white" id="btn-refresh">REFRESH SCREEN</button>
+                    </div>
+                    <div class="col-auto">
+                        <button type="button" class="btn btn-danger px-3 me-2" id="btn-delete">DELETE ALL</button>
+                    </div>
+                </div>
+                <div class="submissions-container">
+                    <table class="table table-hover" id="submissions-table">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="fw-bold">ID</th>
+                                <th scope="col" class="fw-bold">FULL NAME</th>
+                                <th scope="col" class="fw-bold">DATE</th>
+                                <th scope="col" class="fw-bold text-center">DETAILS</th>
+                                <th scope="col" class="fw-bold text-center">IMAGE</th>
+                                <th scope="col" class="fw-bold text-center">VISIBLE</th>
+                                <th scope="col" class="fw-bold text-center">LIKES</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+        <div class="modal fade" id="submission-modal">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title px-3">Details - Submission n° <span class="id"></span></h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="p-3">
+                            <div class="row mb-4">
+                                <div class="col-4">
+                                    <p class="fw-bold mb-2">Gender</p>
+                                    <p class="gender"></p>
+                                </div>
+                                <div class="col-4">
+                                    <p class="fw-bold mb-2">Age</p>
+                                    <p class="age"></p>
+                                </div>
+                                <div class="col-4">
+                                    <p class="fw-bold mb-2">Ethnicity</p>
+                                    <p class="ethnicity"></p>
+                                </div>
+                            </div>
+                            <div class="row mb-4">
+                                <div class="col-7">
+                                    <div class="mb-3">
+                                        <p class="fw-bold mb-2">Original Full Name</p>
+                                        <input type="text" disabled class="form-control fullname" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <p class="fw-bold mb-2">New Full Name</p>
+                                        <input type="text" class="form-control updated-fullname" />
+                                    </div>
+                                    <div class="mb-3">
+                                        <p class="fw-bold mb-2">Original Story</p>
+                                        <textarea class="form-control story" disabled></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <p class="fw-bold mb-2">New Story</p>
+                                        <div class="ckeditor updated-story"></div>
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <p class="fw-bold mb-2">AI Image</p>
+                                    <div class="storyimg-container">
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <form id="storyimg-form" enctype="multipart/form-data" method="POST">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <input type="hidden" name="updated-fullname" />
+                                                    <input type="hidden" name="updated-story" />
+                                                    <input type="file" name="storyimg" class="form-control" id="storyimg" accept="image/*" />
+                                                </div>
+                                                <div class="col-auto">
+                                                    <button class="btn btn-success" id="btn-upload" type="submit">Upload</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <p class="successfull-upload text-success fw-bold">Upload completed!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary btn-save">SAVE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

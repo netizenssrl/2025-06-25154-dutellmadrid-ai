@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="default">
+        <meta name="theme-color" content="#4B7DA0">
+        <meta name="viewport" content="viewport-fit=cover, user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="color-scheme" content="light only">
+	    <link rel="profile" href="https://gmpg.org/xfn/11">
+
+        <title>A Story That Matters | Remote</title>
+        <link rel="stylesheet" href="assets/css/bootstrap-5.3.0-dist/bootstrap-grid.min.css" />
+		<link rel="stylesheet" href="assets/css/bootstrap-5.3.0-dist/bootstrap-utilities.min.css" />
+        <link rel="stylesheet" href="assets/fonts/fonts.css" />
+		<link rel="stylesheet" href="assets/css/ipad.css" />
+
+		<script src="assets/js/jquery-3.7.0.min.js"></script>
+		<script src="assets/js/axios/axios.min.js"></script>
+		<script src="assets/js/socket.io.min.js"></script>
+		<script src="assets/js/ipad.js"></script>
+    </head>
+    <body>
+        <section id="remote-control" class="app-section">
+            <header class="pt-4">
+                <div class="row justify-content-center g-0">
+                    <div class="col-auto">
+                        <img src="assets/img/ipad-dutell-logo.png" class="dutell-logo mb-4" />
+                        <img src="assets/img/ipad-main-logo.png" class="main-logo" />
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-auto">
+                            <button class="btn-navigation prev"></button>
+                        </div>
+                        <div class="col">
+                            <p class="text-white text-center fw-bold mb-5">
+                                TAP THE ARROWS<br>
+                                TO VIEW THE POSTCARDS<br>
+                                ON THE SCREEN IN FRONT OF YOU.
+                            </p>
+                            <button class="btn-like mx-auto disabled">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="toggle-text text-primary">
+                                            <i class="like-icon"></i>
+                                            Like
+                                        </p>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+                        <div class="col-auto">
+                            <button class="btn-navigation next"></button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <footer class="pb-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <p class="text-white">
+                                Content of postcards will be generated using AI models and are for illustration purposes only Actual results may vary.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+			</footer>
+        </section>
+    </body>
+</html>
